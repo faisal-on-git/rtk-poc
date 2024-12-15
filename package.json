@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.4.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
@@ -16,7 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=true react-scripts build",
+    "build": "GENERATE_SOURCEMAP=true react-scripts build && npm run upload-sourcemaps",
+    "upload-sourcemaps": "node scripts/upload-sourcemaps.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
